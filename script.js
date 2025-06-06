@@ -10,20 +10,18 @@ Licensed under the MIT License. See LICENSE file in the project root for full li
 
 // Scrolls page fully and extracts video links after scroll is done
 async function autoScrollAndExtract() {
-    const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
-    const screenHeight = window.screen.height;
-    let i = 1;
+	const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+	const screenHeight = window.screen.height;
+	let i = 1;
 
 	// 🖱️ Scroll to load all content
     while (true) {
-        window.scrollTo(0, screenHeight * i * 2);
-        await delay(2500); // Adjust based on network speed
-        const scrollHeight = document.body.scrollHeight;
-        if (screenHeight * i > scrollHeight) break;
-        i++;
-    }
-
-	//https://www.tiktok.com/@codewithvincent
+	    window.scrollTo(0, screenHeight * i * 2);
+	    await delay(2500); // Adjust based on network speed
+	    const scrollHeight = document.body.scrollHeight;
+	    if (screenHeight * i > scrollHeight) break;
+		i++;
+	}
 
     // 🔗 Scrape video links
     const className = "css-gamknx-DivVideoFeedV2 ecyq5ls0";
