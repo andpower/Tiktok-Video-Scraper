@@ -37,9 +37,5 @@ Then choose:
 ## 📂 Output
 Videos are saved in the `/videos` folder as .mp4 files using the original video titles.
 
-## 📜 License
-MIT License — see LICENSE for full terms.
-© 2025 Matthew Licari. All rights reserved.
-
 ## 🌟 Star the Repo
 If you liked this or helped you, please ⭐ the repo 😀
