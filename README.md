@@ -26,7 +26,7 @@ pip install -r requirements.txt
 ## 🛠️ Usage
 ▶️ Run the scraper:
 ```bash
-python3 tiktok_scraper.py
+python3 main.py
 ```
 Then choose:
 ```bash
