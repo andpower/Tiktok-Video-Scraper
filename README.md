@@ -23,6 +23,9 @@ cd Tiktok-Video-Scraper
 pip install -r requirements.txt
 ```
 
+This project was developed using **Python 3.12**. Other Python 3 versions
+should work, but 3.12 is recommended.
+
 ## 🛠️ Usage
 ▶️ Run the scraper:
 ```bash
