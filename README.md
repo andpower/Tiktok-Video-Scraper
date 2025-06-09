@@ -1,17 +1,16 @@
 # 🎥 TikTok Video Scraper (No Watermark)
 
-Download videos from any public TikTok profile **without watermarks** using `TikMate` and browser automation via Selenium.
+A simple Cloudflare Worker that downloads TikTok videos without watermarks using the public Tikwm API.
 
 > ⚡ Built by [@matthewdotpy](https://github.com/matthewdotpy)
 
 ---
 
 ## 📦 Features
-- 🔍 Scrapes all video links from a TikTok profile using headless Chrome
-- 💧 Downloads clean, high-quality videos with no watermark via TikMate
-- 💬 CLI with interactive progress and status GUI
-- 🎯 Option to download just one video or full profile batch
-- ✅ Works cross-platform (Windows, Mac, Linux)
+- 🔍 Fetches TikTok pages and parses metadata using `cheerio`
+- 💧 Retrieves clean video URLs via the Tikwm API
+- 🖱️ Provides a small HTML form for easy downloads
+- ✅ Deployable to Cloudflare Workers using `wrangler`
 
 ---
 
@@ -20,22 +19,21 @@ Download videos from any public TikTok profile **without watermarks** using `Tik
 ```bash
 git clone https://github.com/matthewdotpy/Tiktok-Video-Scraper.git
 cd Tiktok-Video-Scraper
-pip install -r requirements.txt
+npm install
 ```
 
 ## 🛠️ Usage
-▶️ Run the scraper:
+Start the worker locally:
 ```bash
-python3 tiktok_scraper.py
+npx wrangler dev
 ```
-Then choose:
-```bash
-1️⃣ Paste a TikTok video link to download a video
-2️⃣ Paste a TikTok profile link to scrape and download all videos
-```
+Then open the provided URL in your browser and paste a TikTok link into the form.
 
-## 📂 Output
-Videos are saved in the `/videos` folder as .mp4 files using the original video titles.
+## 🌐 Deployment
+Configure your Cloudflare account in `wrangler.toml` and run:
+```bash
+npx wrangler publish
+```
 
 ## 🌟 Star the Repo
-If you liked this or helped you, please ⭐ the repo 😀
+If you liked this project or it helped you, please ⭐ the repo 😀
